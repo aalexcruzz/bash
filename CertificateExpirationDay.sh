@@ -15,7 +15,7 @@ function ctrl_c(){
 #Variables Keystore and Cloudwatch
 AliasName=$1
 MetricName=$2
-FilePath=ValidTuya.jks #Path keystore file
+FilePath=/etc/microservice/keystore.jks #Path keystore file
 Password=valid872 #Password keystore file
 Namespace=Microservice-Cert-Expiration #cloudwatch Namespace
 InstanceName=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
