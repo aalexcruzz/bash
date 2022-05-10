@@ -9,4 +9,4 @@ In a ec2 instance where use a key repository add this file in a scheduled task (
 0 */10 * * * /opt/services/CertificateExpirationDay.sh AliasName MetricName
 ```
 
-Once these parameters are defined, depending on the selected attack mode... everything necessary will be displayed automatically.
+Once these parameters are defined, everything necessary will be deployed automatically.
