@@ -21,8 +21,6 @@ Namespace=Microservice-Cert-Expiration #cloudwatch Namespace
 InstanceName=$(curl -s http://169.254.169.254/latest/meta-data/instance-id)
 AWSZone=us-east-1
 
-
-
 calculate_expiration_date() {
     ExpirationDate=$(keytool -list -v -keystore $FilePath -storepass $Password -alias "$AliasName" | sed "/Extensions:/,/\*\*/d" | grep  "until" | sed 's/.*until: //' | sed 's/COT/-05/g' 2>/dev/null)
     CertExpirationDate=$(date -d "${ExpirationDate}" +%s)
